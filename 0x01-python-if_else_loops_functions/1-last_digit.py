@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-number = int(input("Enter a number between -10000 and 10000 : "))
+import random
+number = random.randint(-10000, 10000)
 if number < 0 and number > -10000:
     print("Last digit of {} is -{} and is less than 6 and not 0".format(number,
     (10- (number % 10))))
