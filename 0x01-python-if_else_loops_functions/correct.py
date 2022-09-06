@@ -13,3 +13,5 @@ if number > 0 and number < 10000:
               .format(number, number % 10))
     elif (number % 10) == 0:
         print("Last digit of {} is {} and is 0".format(number, number % 10))
+    elif number == 0:
+        print("Last digit of {} is {} and is 0".format(number, number % 10))
