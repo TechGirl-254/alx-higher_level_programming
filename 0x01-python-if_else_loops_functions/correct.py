@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-import math
-number = int(input("Enter a number bewteen -10000 and 10000: "))
-if number < 0 and number > -10000:
-    print("Last digit of {} is {} and is less than 6 and not 0".format(number,
-        (math.trunc(math.fmod(number, 10)))))
-if number > 0 and number < 10000:
-    if number % 10 > 5:
-        print("Last digit of {} is {} and is greater than 5".format(number,
-            number % 10))
-    elif number % 10 < 6 and number % 10 != 0:
-      print("Last digit of {} is {} and is less than 6 and not 0"
-              .format(number, number % 10))
-    elif (number % 10) == 0:
-        print("Last digit of {} is {} and is 0".format(number, number % 10))
-    elif number == 0:
-        print("Last digit of {} is {} and is 0".format(number, number % 10))
+
+i = 0
+while(i <= 9):
+    j = 1
+
+    while(j <= 9):
+        if i < j:
+            print("{}{},".format(i, j), end=' ')
+        elif i > j and i != 9 and j != 8:
+            print("{}{},".format(j, i), end=' ')
+        elif i > j and i == 9 and j == 8:
+            print("{}{}".format(j, i))
+        else:
+            break
+        j += 1
+    i += 1
