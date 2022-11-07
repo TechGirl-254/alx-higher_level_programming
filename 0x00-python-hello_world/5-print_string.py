@@ -2,4 +2,4 @@
 str = "Holberton School"
 newstring = str * 3
 print(f"{newstring}")
-print(f"{newstring: :10}")
+print(f"{newstring [:10]}")
