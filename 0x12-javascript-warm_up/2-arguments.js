@@ -7,4 +7,3 @@ if (len.length < 3) {
 } else {
   console.log('Arguments found');
 }
-console.log('\n');
