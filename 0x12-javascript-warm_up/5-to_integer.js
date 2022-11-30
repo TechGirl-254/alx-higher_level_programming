@@ -6,6 +6,6 @@ if (!myArg2) {
     if (isNaN(myArg2)) {
       console.log('Not a number');
     } else {
-      console.log('My number:', myArg[i]);
+      console.log('My number:', myArg2);
     }
   }
