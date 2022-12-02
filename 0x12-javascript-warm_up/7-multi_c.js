@@ -5,8 +5,8 @@ let i = 1;
 if (!x || y) {
   console.log('Missing number of occurrences');
 } else {
-    while (i <= x) {
-      console.log('C is fun');
-      i++;
-    }
+  while (i <= x) {
+    console.log('C is fun');
+    i++;
+  }
 }
