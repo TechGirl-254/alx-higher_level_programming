@@ -1,5 +1,10 @@
 #!/usr/bin/node
-const cProg = 'C is fun';
-const pyProg = 'Python is cool';
-const jProg = 'JavaScript is amazing';
-console.log(`${cProg}\n${pyProg}\n${jProg}`);
+
+/* Using an array to print multiple lines*/
+
+let varPrint = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+let i = 0;
+while (i < 3) {
+	console.log(varPrint[i]);
+	i++;
+}
