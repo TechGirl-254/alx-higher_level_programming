@@ -1,3 +1,3 @@
 #!/bin/bash
 #This file uses a CLI arguement to send a request to a server
-curl -sI "$1" -o newfile.txt | grep -i 'content-length' newfile.txt | awk '{print $2}'
+curl -sI "$1" | grep -i 'content-length' | cut -d " " -f2-
