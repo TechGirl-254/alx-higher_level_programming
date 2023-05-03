@@ -1,0 +1,14 @@
+HTTP/2 200 
+content-encoding: gzip
+accept-ranges: bytes
+age: 434908
+cache-control: max-age=604800
+content-type: text/html; charset=UTF-8
+date: Wed, 03 May 2023 12:47:17 GMT
+etag: "3147526947+gzip"
+expires: Wed, 10 May 2023 12:47:17 GMT
+last-modified: Thu, 17 Oct 2019 07:18:26 GMT
+server: ECS (dcb/7FA3)
+x-cache: HIT
+content-length: 648
+
