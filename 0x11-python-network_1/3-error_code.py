@@ -11,6 +11,4 @@ if __name__ == "__main__":
              body = r.read().decode("utf-8")
              print(body)
      except error.HTTPError as err:
-         print("Error code: " + err.code)
-     except error.URLError as err:
-         print("Error code: " + err.code)
+         print(f"Error code: {err.code}")
