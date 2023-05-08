@@ -12,3 +12,5 @@ if __name__ == "__main__":
              print(body)
      except error.HTTPError as err:
          print("Error code: " + err.code)
+     except error.URLError as err:
+         print("Error code: " + err.code)
