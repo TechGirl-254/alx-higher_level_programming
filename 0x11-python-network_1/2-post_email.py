@@ -10,8 +10,8 @@ if __name__ == "__main__":
     emaildict = {
         "email": argv[2]
         }
-    data = parse.urlencode(emaildict).encode('utf-8')
+    parsed = parse.urlencode(emaildict).encode('utf-8')
 
-    with request.urlopen(url, data) as responseobj:
+    with request.urlopen(url, data=parsed) as responseobj:
         response = responseobj.read()
     print(f"Your email is: ", {response.decode('utf-8')}) 
