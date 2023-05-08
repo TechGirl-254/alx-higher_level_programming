@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
-""" Passing an email address as a parameter, making a POST request
-and reading the response.
-"""
+""" Passing an email as a parameter and decoding the response."""
 
 from urllib import request, parse
 from sys import argv
