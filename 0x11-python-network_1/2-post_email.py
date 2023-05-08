@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Passing an email as a parameter and decoding the response. """
+"""Passing an email as a parameter and decoding the response"""
 
 from urllib import request, parse
 from sys import argv
