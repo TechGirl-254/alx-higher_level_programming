@@ -1,13 +1,14 @@
 #!/usr/bin/python3
+""" Module to send a POST request to the passed URL
+    with the email, and displays the body of the response
+"""
 
-"""Making a POST request using requests package"""
 
 import requests
 from sys import argv
 
+
 if __name__ == "__main__":
-    mydata = {
-            "email": "argv[2]"
-            }
-    page = requests.post(argv[1], mydata)
-    print(f"Your email is: {page.text}")
+    value = {'email': argv[2]}
+    post_request = requests.post(argv[1], value).text
+    print(post_request)
