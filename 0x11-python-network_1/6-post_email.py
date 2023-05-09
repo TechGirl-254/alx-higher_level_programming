@@ -6,9 +6,9 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    url = argv[1]
+    url = "argv[1]"
     mydata = {
-            "email": argv[2]
+            "email": "argv[2]"
             }
-    page = requests.get(url, data=mydata)
+    page = requests.post(url, data=mydata)
     print(f"Your email is: {page.text}")
