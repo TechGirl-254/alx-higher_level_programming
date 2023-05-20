@@ -1,1 +1,1 @@
-This is a directory on Javascript objects and scopes
+This is a folder containing practice concepts on js objects, scopes and closures
