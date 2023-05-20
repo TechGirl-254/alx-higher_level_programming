@@ -6,5 +6,5 @@ const dict = require('./101-data').dict;
 
 const array = Object.values(dict);
 
-const newDict = array.map(function(key, value) {return (value + [key,] ) });
+const newDict = array.map(function (key, value) { return (value + [key]); });
 console.log(`${newDict.value}: ${key}`);
