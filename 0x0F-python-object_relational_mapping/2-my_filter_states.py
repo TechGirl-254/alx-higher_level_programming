@@ -14,7 +14,7 @@ db = MySQLdb.connect(
 c = db.cursor()
 
 c.execute("SELECT * FROM states WHERE states.name LIKE %s ORDER BY id",
-            (argv[4],))
+          (argv[4],))
 rows = c.fetchall()
 for i in rows:
     print(i)

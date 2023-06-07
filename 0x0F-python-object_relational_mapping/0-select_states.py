@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-import MySQLdb
+"""Connecting to and querrying a db using mysqldb
+"""
 
-if __name__ == '__main__'
+import MySQLdb
 
 db = MySQLdb.connect(
         user="root",
