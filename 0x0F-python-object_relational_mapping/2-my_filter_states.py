@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""USing MySQLdb to get names with a specific string"""
+
 import MySQLdb
 from sys import argv
 

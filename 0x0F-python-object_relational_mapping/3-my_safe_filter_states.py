@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Using MySQLdb with sql injection prevention"""
+
 import MySQLdb
 from sys import argv
 
