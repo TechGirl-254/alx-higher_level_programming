@@ -1,22 +1,19 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+""" Prints the first State object from the database hbtn_0e_6_usa
 """
-import sys
-from model_state import Base, State
 
-from sqlalchemy import create_engine, text
+from model_state import State, Base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine
+from sys import argv
 
-if __name__ == "__main__":
-    engine =
-    create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
-        sys.argv[2], sys.argv[3], pool_pre_ping=True))
-    Base.metadata.create_all(engine)
-
-    with engine.connect() as conn:
-        result = conn.execute(text("SELECT * FROM states ORDER BY id"))
-        first = result.first()
-
-        if first is not None:
-            print(f"{first.id}: {first.name}")
-        else:
-            print("Nothing\n")
+if __name__ == '__main__':
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]))
+    session = Session(bind=engine)
+    first_row = session.query(State).first()
+    if first_row:
+        print('{}: {}'.format(first_row.id, first_row.name))
+    else:
+        print("Nothing")
+    session.close()

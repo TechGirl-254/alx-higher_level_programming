@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Start link class to table in database
+""" Lists all State objects that contain the letter a
 """
-import sys
-from model_state import Base, State
 
-from sqlalchemy import create_engine, text
+from sys import argv
+from model_state import State, Base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1],
-                       sys.argv[2], sys.argv[3], pool_pre_ping=True))
-
-Base.metadata.create_all(engine)
-
-with engine.connect() as conn:
-    result = conn.execute(text("SELECT * FROM states WHERE states.name LIKE
-    '%a%' ORDER BY id"))
-    for x in result:
-        print(f"{x.id}: {x.name}")
+if __name__ == '__main__':
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]))
+    session = Session(bind=engine)
+    a_states = session.query(State).filter(State.name.like("%a%")).all()
+    for state in a_states:
+        print('{}: {}'. format(state.id, state.name))
+    session.close()

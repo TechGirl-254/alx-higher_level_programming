@@ -1,1 +1,1 @@
-This folder contains files on how to manipulate SQL databases using python scripts.
+This is a file containing mysqldb and sqlalchemy practice
