@@ -12,8 +12,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     with engine.connect() as conn:
-        result = conn.execute(text("SELECT * FROM states WHERE states.name=n
-ame"), {"name": sys.argv[4]})
+        result = conn.execute(text("SELECT * FROM states WHERE name=name"), {
+"name": sys.argv[4]})
         res = result.fetchone()
         if res is not None:
             print(res.id)
