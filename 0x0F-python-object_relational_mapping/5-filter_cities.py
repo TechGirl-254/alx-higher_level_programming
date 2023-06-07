@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" Querrying cities by state id """
+""" Querrying cities by state id.
+"""
 
 import MySQLdb
 from sys import argv

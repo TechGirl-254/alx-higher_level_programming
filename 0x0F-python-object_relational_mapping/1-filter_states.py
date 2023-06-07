@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Using MSQLdb to connect and get data from my database"""
+"""Using MSQLdb to connect and get data from my database.
+"""
 
 import MySQLdb
 

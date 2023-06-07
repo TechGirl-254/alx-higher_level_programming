@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" Extrating the names of cities from a DB using MySQLdb module """
+""" Extrating the names of cities from a DB using MySQLdb module.
+"""
 
 import MySQLdb
 
