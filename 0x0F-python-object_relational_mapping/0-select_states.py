@@ -2,6 +2,8 @@
 
 import MySQLdb
 
+if __name__ == '__main__'
+
 db = MySQLdb.connect(
         user="root",
         passwd="root/root",
